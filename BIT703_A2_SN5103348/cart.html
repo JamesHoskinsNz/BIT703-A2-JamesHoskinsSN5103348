@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aotearoa Adventure Gear | Cart</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ==========================================
+         MAIN GLOBAL NAVIGATION HEADER
+         ========================================== -->
+    <header>
+         <div id="header-placeholder"></div>
+    </header>
+
+    <main class="checkout-main">
+        
+        <!-- Progress Bar -->
+        <div class="checkout-progress">
+            <div class="active">1. Shopping Cart</div>
+            <div>2. Shipping Details</div>
+            <div>3. Payment Options</div>
+        </div>
+
+        <div class="checkout-grid">
+            <!-- Left: Cart Items -->
+            <div>
+                <h2 class="checkout-heading">Shopping Cart</h2>
+                
+                <!-- Cart Item 1 -->
+                <div class="cart-item">
+                    <img src="images/image_coming-soon.jpeg" alt="Product" class="cart-item-img">
+                    <div class="cart-item-details">
+                        <h4>PRODUCT NAME</h4>
+                        <p class="cart-item-desc">Short engaging description of the gear.</p>
+                        <!-- Using a data attribute to store the base price for JS -->
+                        <p class="cart-item-price" data-price="300">$300</p> 
+                    </div>
+                    <input type="number" id="cartQty" value="1" min="1" class="cart-qty-input">
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group mt-2">
+                    <a href="shipping.html" class="btn-primary btn-submit">Next</a>
+                    <a href="shop.html" class="btn-primary btn-cancel">Cancel</a>
+                </div>
+            </div>
+
+            <!-- Right: Summary -->
+            <div>
+                <h2 class="checkout-heading">Summary</h2>
+                <input type="text" placeholder="ENTER COUPON CODE" class="coupon-input">
+                
+                <div class="summary-line"><p>SUBTOTAL</p><p id="cartSubtotal">$300.00</p></div>
+                <div class="summary-line"><p>SHIPPING</p><p id="cartShipping">$20.00</p></div>
+                <div class="summary-line divider"><p>GST (15%)</p><p id="cartGST">$45.00</p></div>
+                
+                <div class="summary-total"><p>TOTAL</p><p id="cartTotal">$365.00</p></div>
+            </div>
+        </div>
+    </main>
+    <!-- ==========================================
+         GLOBAL FOOTER
+         ========================================== -->
+    <div id="footer-placeholder"></div>
+    
+    <script src="js/adventure.js"></script>
+</body>
+</html>

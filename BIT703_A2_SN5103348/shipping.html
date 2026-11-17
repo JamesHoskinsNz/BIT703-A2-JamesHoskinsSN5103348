@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aotearoa Adventure Gear | Shipping</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ==========================================
+         MAIN GLOBAL NAVIGATION HEADER
+         ========================================== -->
+    <header>
+         <div id="header-placeholder"></div>
+    </header>
+    
+    <main class="checkout-main">
+        
+        <!-- Progress Bar -->
+        <div class="checkout-progress">
+            <div>1. Shopping Cart</div>
+            <div class="active">2. Shipping Details</div>
+            <div>3. Payment Options</div>
+        </div>
+
+        <form id="shippingForm" class="checkout-grid">
+            <!-- Left: Shipping Form -->
+            <div>
+                <h2 class="checkout-heading">Shipping Details</h2>
+                
+                <div class="input-grid-half">
+                    <input type="text" class="form-input" placeholder="First Name" required>
+                    <input type="text" class="form-input" placeholder="Last Name" required>
+                </div>
+                
+                <input type="text" class="form-input mb-1" placeholder="Address" required>
+                <input type="text" class="form-input mb-1" placeholder="Address 2">
+                
+                <div class="input-grid-half">
+                    <select class="form-input" required>
+                        <option value="">Country</option>
+                        <option value="NZ">New Zealand</option>
+                    </select>
+                    <input type="text" class="form-input" placeholder="City" required>
+                </div>
+                
+                <div class="input-grid-half mb-2">
+                    <input type="text" class="form-input" placeholder="Zip/Postal Code" required pattern="[0-9]{4}" title="Please enter a valid 4-digit NZ Postcode">
+                    <input type="tel" class="form-input" placeholder="Phone Number" required>
+                </div>
+
+                <!-- Shipping Options -->
+                <div class="shipping-options">
+                    <label class="shipping-method-label active-bg">
+                        <input type="radio" name="shippingMethod" value="standard" checked style="margin-top: 5px;">
+                        <div>
+                            <div style="color: #555;">Standard Delivery</div>
+                            <div style="font-size: 0.8rem; color: #888;">Between 2 - 5 working days</div>
+                        </div>
+                    </label>
+                    <label class="shipping-method-label">
+                        <input type="radio" name="shippingMethod" value="nextday" style="margin-top: 5px;">
+                        <div>
+                            <div style="color: #555;">Next Day Delivery - $20</div>
+                            <div style="font-size: 0.8rem; color: #888;">24 hours from checkout</div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button type="submit" class="btn-primary btn-submit">Next</button>
+                    <a href="cart.html" class="btn-primary btn-cancel">Cancel</a>
+                </div>
+            </div>
+
+            <!-- Right: Summary -->
+            <div>
+                <h2 class="checkout-heading">Summary</h2>
+                
+                <div class="summary-item">
+                    <img src="images/image_coming-soon.jpeg" alt="Product" class="summary-img">
+                    <div>
+                        <h4>PRODUCT NAME</h4>
+                        <p>$300.00</p>
+                    </div>
+                </div>
+
+                <div class="summary-line"><p>SUBTOTAL</p><p id="subtotalCost">$300.00</p></div>
+                <div class="summary-line"><p>SHIPPING</p><p id="shippingCost">$10.00</p></div>
+                <div class="summary-line divider"><p>GST (15%)</p><p id="gstCost">$45.00</p></div>
+                
+                <div class="summary-total"><p>TOTAL</p><p id="finalTotal">$355.00</p></div>
+            </div>
+        </form>
+    </main>
+    
+    <!-- ==========================================
+         GLOBAL FOOTER
+         ========================================== -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/adventure.js"></script>
+</body>
+</html>

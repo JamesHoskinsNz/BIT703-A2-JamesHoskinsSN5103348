@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aotearoa Adventure Gear | NZ</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ==========================================
+         MAIN GLOBAL NAVIGATION HEADER
+         ========================================== -->
+    <header>
+         <div id="header-placeholder"></div>
+    </header>
+    
+    <!-- Floating Anchor -->
+    <a href="#" class="floating-anchor" id="floatingAnchor">↑ Top</a>
+    
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="dynamic-section">
+        <h1 class="text-primary">Adventure Awaits</h1>
+        <hr class="small">
+        
+        <div class="product-grid grid-standard hero-grid">
+            <!-- Wrapped Hero images in clickable anchor tags -->
+            <a href="product_detail.html" class="product-card"><img src="images/image_coming-soon.jpeg" alt="Item"></a>
+            <a href="product_detail.html" class="product-card"><img src="images/image_coming-soon.jpeg" alt="Item"></a>
+            <a href="product_detail.html" class="product-card"><img src="images/image_coming-soon.jpeg" alt="Item"></a>
+            
+            <div class="hero-button-wrapper">
+                <a href="shop.html" class="btn-cart">Shop Now</a>
+            </div>
+        </div>
+    </section>
+    <hr>
+    
+    <!-- ==========================================
+         Featured Product Carousel
+         ========================================== -->
+    <section class="dynamic-section">
+        <h1 class="text-primary text-center">Featured Products</h1>
+        
+        <!-- Carousel Container -->
+        <div id="featuredCarousel" class="carousel slide featured-carousel" data-bs-ride="carousel">
+            
+            <div class="carousel-inner">
+                
+                <!-- SLIDE 1 -->
+                <div class="carousel-item active">
+                    <div class="product-grid grid-double carousel-grid">
+                        
+                        <a href="product_detail.html" class="product-card">
+                            <img src="images/image_coming-soon.jpeg" alt="Featured Item 1">
+                            <div class="product-info text-primary carousel-product-info">
+                                <h4>PRODUCT NAME</h4>
+                                <p>$300</p>
+                            </div>
+                        </a>
+
+                        <a href="product_detail.html" class="product-card">
+                            <img src="images/image_coming-soon.jpeg" alt="Featured Item 2">
+                            <div class="product-info text-primary carousel-product-info">
+                                <h4>PRODUCT NAME</h4>
+                                <p>$300</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                
+                <!-- SLIDE 2 -->
+                <div class="carousel-item">
+                    <div class="product-grid grid-double carousel-grid">
+                        
+                        <a href="product_detail.html" class="product-card">
+                            <img src="images/image_coming-soon.jpeg" alt="Featured Item 3">
+                            <div class="product-info text-primary carousel-product-info">
+                                <h4>PRODUCT NAME</h4>
+                                <p>$300</p>
+                            </div>
+                        </a>
+
+                        <a href="product_detail.html" class="product-card">
+                            <img src="images/image_coming-soon.jpeg" alt="Featured Item 4">
+                            <div class="product-info text-primary carousel-product-info">
+                                <h4>PRODUCT NAME</h4>
+                                <p>$300</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div> <!-- End of carousel-inner -->
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev carousel-arrow carousel-arrow-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next carousel-arrow carousel-arrow-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <hr>
+    
+    <!-- ==========================================
+         NEWSLETTER SECTION
+         ========================================== -->
+    <!-- Added 'grid-double' to ensure 2-columns on desktop -->
+    <section class="dynamic-section product-grid grid-double newsletter-grid text-primary newsletter-section">
+        
+        <div class="text-container newsletter-text-container">
+            <h2 class="newsletter-heading">Newsletter</h2>
+            <p class="newsletter-subtext">Sign up for the latest gear, promos and advice!</p>
+        </div>
+        
+        <div class="newsletter-form-container">
+            <form id="newsletterForm" novalidate class="newsletter-form">
+                
+                <label for="email" class="visually-hidden">Email Address</label>
+                <!-- Native XSS Regex Pattern added for Email -->
+                <input type="email" id="email" name="Email" placeholder="Email Address" required 
+                       class="form-input" style="flex-grow: 1;" 
+                       pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Please enter a valid email address">
+                
+                <input type="submit" value="Subscribe" class="btn-primary btn-submit">
+                
+                <div id="emailError" class="form-feedback feedback-error" style="display: none;">Please enter a valid email address.</div>
+                <div id="emailSuccess" class="form-feedback feedback-success" style="display: none;">Thanks for subscribing!</div>
+            
+            </form>
+        </div>    
+    </section>
+    <hr>
+    
+    <!-- ==========================================
+         PRODUCT GRID REVIEWS
+         ========================================== -->
+    <section>
+        <section class="dynamic-section">
+            <div class="product-grid grid-featured mt-3">
+        
+            <!-- LARGE FEATURED ITEM (Spans 2 rows) -->
+            <a href="product_detail.html" class="product-card span-2-rows">
+                <img src="images/image_coming-soon.jpeg" alt="Featured Item">
+                <div class="product-info">
+                    <div class="product-info-left">
+                        <h4>Product Name</h4>
+                        <p>$300</p>
+                    </div>
+                    <div class="product-stars">★★★☆☆</div>
+                </div>
+            </a>
+
+            <!-- SMALL ITEM 1 -->
+            <a href="product_detail.html" class="product-card">
+                <img src="images/image_coming-soon.jpeg" alt="Item">
+                <div class="product-info">
+                    <div class="product-info-left">
+                        <h4>Product Name</h4>
+                        <p>$300</p>
+                    </div>
+                    <div class="product-stars">★★★★☆</div>
+                </div>
+            </a>
+
+            <!-- SMALL ITEM 2 -->
+            <a href="product_detail.html" class="product-card">
+                <img src="images/image_coming-soon.jpeg" alt="Item">
+                <div class="product-info">
+                    <div class="product-info-left">
+                        <h4>Product Name</h4>
+                        <p>$300</p>
+                    </div>
+                    <div class="product-stars">★★★★☆</div>
+                </div>
+            </a>
+
+            <!-- SMALL ITEM 3 -->
+            <a href="product_detail.html" class="product-card">
+                <img src="images/image_coming-soon.jpeg" alt="Item">
+                <div class="product-info">
+                    <div class="product-info-left">
+                        <h4>Product Name</h4>
+                        <p>$300</p>
+                    </div>
+                    <div class="product-stars">★★★★☆</div>
+                </div>
+            </a>
+
+            <!-- SMALL ITEM 4 -->
+            <a href="product_detail.html" class="product-card">
+                <img src="images/image_coming-soon.jpeg" alt="Item">
+                <div class="product-info">
+                    <div class="product-info-left">
+                        <h4>Product Name</h4>
+                        <p>$300</p>
+                    </div>
+                    <div class="product-stars">★★★★☆</div>
+                </div>
+            </a>
+
+            </div>
+        </section>
+    <hr>
+    
+    <!-- ==========================================
+         ABOUT SECTION
+         ========================================== -->
+    <section class="dynamic-section text-primary">
+        <h2>We Love the outdoors</h2>
+        <p>We love what you love, Play like you play and live like you live.<br> To learn more about us and our story click the button below.</p>
+        <div class="dynamic-section">
+            <a href="about.html" class="btn-cart text-container">Learn More</a>
+        </div>
+    </section>
+    
+    <!-- ==========================================
+         GLOBAL FOOTER
+         ========================================== -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/adventure.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aotearoa Adventure Gear | Payment</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ==========================================
+         MAIN GLOBAL NAVIGATION HEADER
+         ========================================== -->
+    <header>
+         <div id="header-placeholder"></div>
+    </header>
+    
+    <main class="checkout-main">
+        
+        <!-- Progress Bar -->
+        <div class="checkout-progress">
+            <div>1. Shopping Cart</div>
+            <div>2. Shipping Details</div>
+            <div class="active">3. Payment Options</div>
+        </div>
+
+        <form id="paymentForm" class="checkout-grid">
+            <!-- Left: Payment Form -->
+            <div>
+                <h2 class="checkout-heading">Payment method</h2>
+                
+                <!-- Credit Card Section -->
+                <div class="payment-box">
+                    <label class="radio-label">
+                        <input type="radio" name="paymentType" value="creditcard" checked>
+                        Credit Card
+                    </label>
+                    
+                    <div class="input-grid-card">
+                        <input type="text" class="form-input" placeholder="0000 0000 0000 0000" required pattern="[0-9]{16}" title="Enter a 16-digit card number">
+                        <input type="text" class="form-input" placeholder="MM / YY" required pattern="(0[1-9]|1[0-2])\/[0-9]{2}" title="Format: MM/YY">
+                        <input type="text" class="form-input" placeholder="CVV" required pattern="[0-9]{3,4}" title="3 or 4 digit CVV">
+                    </div>
+                    <input type="text" class="form-input" placeholder="Card Holder Name" required>
+                </div>
+
+                <!-- PayPal Section -->
+                <div class="payment-box paypal-box">
+                    <label class="radio-label" style="margin-bottom: 0;">
+                        <input type="radio" name="paymentType" value="paypal">
+                        PayPal
+                    </label>
+                    <div class="paypal-logo-text">PayPal</div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button type="submit" class="btn-primary btn-submit">Pay Now</button>
+                    <a href="shipping.html" class="btn-primary btn-cancel">Cancel</a>
+                </div>
+            </div>
+
+            <!-- Right: Summary -->
+            <div>
+                <h2 class="checkout-heading">Summary</h2>
+                
+                <div class="summary-item">
+                    <img src="images/image_coming-soon.jpeg" alt="Product" class="summary-img">
+                    <div>
+                        <h4>PRODUCT NAME</h4>
+                        <p>$300</p>
+                    </div>
+                </div>
+
+                <div class="summary-line"><p>SUBTOTAL</p><p id="subtotalCost">$300.00</p></div>
+                <div class="summary-line"><p>SHIPPING</p><p id="shippingCost">$10.00</p></div>
+                <div class="summary-line divider"><p>GST (15%)</p><p id="gstCost">$45.00</p></div>
+                
+                <div class="summary-total"><p>TOTAL</p><p id="finalTotal">$355.00</p></div>
+            </div>
+        </form>
+    </main>
+    
+    <!-- ==========================================
+         GLOBAL FOOTER
+         ========================================== -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/adventure.js"></script>
+</body>
+</html>

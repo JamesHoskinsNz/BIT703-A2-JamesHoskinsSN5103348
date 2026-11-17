@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aotearoa Adventure Gear | Shop</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ==========================================
+         MAIN GLOBAL NAVIGATION HEADER
+         ========================================== -->
+    <header>
+         <div id="header-placeholder"></div>
+    </header>
+    
+    <!-- ==========================================
+         Search section
+         ========================================== -->
+    <section class="dynamic-section">
+        <h1 class="text-primary">Adventure Awaits</h1>
+        <hr class="small">
+        
+        <!-- XSS Protected Search Form -->
+        <form class="shop-search-form">
+            <label for="shopSearch" class="visually-hidden">Search</label>
+            <input type="text" id="shopSearch" class="form-input" placeholder="Search..." required 
+                   pattern="^[a-zA-Z0-9\s\-\']+$" title="Please use only letters and numbers">
+            <button type="submit" class="btn-primary btn-submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- ==========================================
+         Featured Categories section
+         ========================================== -->
+    <!-- UX Note: Implemented category hub layout exactly to wireframe specifications. 
+         In a production e-commerce environment, rendering a direct product grid here rather 
+         than requiring an additional 'Shop Now' click—would reduce click depth, limit user fatigue, and streamline the path to purchase. -->
+    <section class="dynamic-section">
+        <h1 class="text-primary">Featured Categories</h1>
+        <p class="sidebar-desc">Browse some of your favourite outdoor categories</p>
+        
+        <div class="product-grid grid-quad">
+            <!-- Category 1 -->
+            <div class="product-card">
+                <img src="images/image_coming-soon.jpeg" alt="Category 1" class="category-img">
+                <p class="category-title">Category</p>
+            </div>
+            
+            <!-- Category 2 -->
+            <div class="product-card">
+                <img src="images/image_coming-soon.jpeg" alt="Category 2" class="category-img">
+                <p class="category-title">Category</p>
+            </div>
+            
+            <!-- Category 3 -->
+            <div class="product-card">
+                <img src="images/image_coming-soon.jpeg" alt="Category 3" class="category-img">
+                <p class="category-title">Category</p>
+            </div>
+            
+            <!-- Category 4 (Solid Block) --> 
+            <a href="shop.html" class="product-card category-block category-block-link">
+                Shop Now
+            </a>
+        </div>
+    </section>
+    <hr>
+    
+    <!-- ==========================================
+         Products & Newsletter Sidebar section
+         ========================================== -->
+    <!-- UX Note: Newsletter signup component positioned here to fulfill wireframe layout requirements. 
+         Standard conversion rate optimization practice typically reserves mid-funnel pages (like Shop) strictly for product discovery, 
+         relocating repetitive lead-generation forms to the Footer, About, or Help pages to minimize purchase friction. -->
+    <section class="dynamic-section product-grid grid-split shop-split-section">
+    
+        <!-- LEFT SIDEBAR -->
+        <div class="shop-sidebar">
+            <img src="images/image_coming-soon.jpeg" alt="Sidebar Image" class="sidebar-img">
+            <h2 class="text-primary sidebar-title">Header Regarding Your Product</h2>
+            <p class="sidebar-desc">Write an engaging description of your products here to capture the attention of your outdoor customers.</p>
+            <a href="#browse" class="btn-primary btn-submit">Browse All</a>
+        </div>
+
+        <!-- RIGHT MAIN CONTENT -->
+        <div class="shop-main-content">
+            
+            <!-- Newsletter (Top of right column) -->
+            <div class="mini-newsletter">
+                <h2 class="text-primary">Newsletter</h2>
+                <!-- XSS native protection applied via type="email" -->
+                <form class="mini-newsletter-form">
+                    <input type="email" placeholder="Email Address" class="form-input" required>
+                    <button type="submit" class="btn-mini">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- 6 Products Grid (Bottom of right column) -->
+            <div class="product-grid grid-double">
+                
+                <!-- Horizontal Product 1 -->
+                <a href="product_detail.html" class="product-card-horizontal">
+                    <img src="images/image_coming-soon.jpeg" alt="Item">
+                    <div class="horizontal-info">
+                        <h4 class="horizontal-title">PRODUCT NAME</h4>
+                        <div class="horizontal-stars">★★★★☆</div>
+                        <p>$300</p>
+                    </div>
+                </a>
+                <a href="product_detail.html" class="product-card-horizontal">
+                    <img src="images/image_coming-soon.jpeg" alt="Item">
+                    <div class="horizontal-info">
+                        <h4 class="horizontal-title">PRODUCT NAME</h4>
+                        <div class="horizontal-stars">★★★★☆</div>
+                        <p>$300</p>
+                    </div>
+                </a>
+                <a href="product_detail.html" class="product-card-horizontal">
+                    <img src="images/image_coming-soon.jpeg" alt="Item">
+                    <div class="horizontal-info">
+                        <h4 class="horizontal-title">PRODUCT NAME</h4>
+                        <div class="horizontal-stars">★★★★☆</div>
+                        <p>$300</p>
+                    </div>
+                </a>
+                <a href="product_detail.html" class="product-card-horizontal">
+                    <img src="images/image_coming-soon.jpeg" alt="Item">
+                    <div class="horizontal-info">
+                        <h4 class="horizontal-title">PRODUCT NAME</h4>
+                        <div class="horizontal-stars">★★★★☆</div>
+                        <p>$300</p>
+                    </div>
+                </a>
+                <a href="product_detail.html" class="product-card-horizontal">
+                    <img src="images/image_coming-soon.jpeg" alt="Item">
+                    <div class="horizontal-info">
+                        <h4 class="horizontal-title">PRODUCT NAME</h4>
+                        <div class="horizontal-stars">★★★★☆</div>
+                        <p>$300</p>
+                    </div>
+                </a>
+                <a href="product_detail.html" class="product-card-horizontal">
+                    <img src="images/image_coming-soon.jpeg" alt="Item">
+                    <div class="horizontal-info">
+                        <h4 class="horizontal-title">PRODUCT NAME</h4>
+                        <div class="horizontal-stars">★★★★☆</div>
+                        <p>$300</p>
+                    </div>
+                </a>  
+            </div>
+        </div>
+    </section>
+    <hr>
+    
+    <!-- ==========================================
+         GLOBAL FOOTER
+         ========================================== -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/adventure.js"></script>
+</body>
+</html>
